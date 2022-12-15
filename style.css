@@ -18,6 +18,7 @@ header{
     padding-top:30px;
     min-height:70px;
     border-bottom:rgb(82, 199, 82) 3px solid;
+    float-left;
 }
 
 ul{
