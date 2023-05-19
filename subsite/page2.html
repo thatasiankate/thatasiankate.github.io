@@ -3,47 +3,34 @@
 <head>
   <link rel="stylesheet" href="./../style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    /* Styles for the website */
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-    }
+    /* ... Your existing styles ... */
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
+    /* CSS animation */
+    .image-container {
+      position: relative;
       display: inline-block;
-      margin-right: 10px;
     }
 
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
+    .image-container img,
+    .image-container .gif {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease;
     }
 
-    main {
-      max-width: 960px;
-      margin: 20px auto;
-      padding: 20px;
+    .image-container .gif {
+      opacity: 0;
     }
 
-    h1 {
-      font-size: 32px;
+    .image-container:hover img {
+      opacity: 0;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.5;
+    .image-container:hover .gif {
+      opacity: 1;
     }
   </style>
 </head>
@@ -61,6 +48,12 @@
   <main>
     <h1>Welcome to My Professional Website</h1>
     <p>This is the content of my website. You can add more sections, images, and customize the styling as per your requirements.</p>
+
+    <!-- Example of an image turning into a GIF on hover -->
+    <div class="image-container">
+      <img src="https://images.pexels.com/photos/432901/pexels-photo-432901.jpeg?cs=srgb&dl=clouds-cloudscape-daylight-432901.jpg&fm=jpg" alt="clouds">
+      <img class="gif" src="http://media3.giphy.com/media/PIh4laWJlz9bq/giphy.gif" alt="moving clouds">
+    </div>
   </main>
 </body>
 </html>
