@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="./../style.css">
 </head>
 <body>
   <header>
-    <p>hi, this is page 1</p>
+    <p>Hi, this is page 1</p>
     <nav>
       <ul>
         <li><a href="page2.html">Page 2</a></li>
@@ -12,5 +13,26 @@
       </ul>
     </nav>
   </header>
+
+  <main>
+    <h1>Guess the Number</h1>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="number" id="guessInput">
+    <button onclick="checkGuess()">Check</button>
+    <p id="result"></p>
+  </main>
+
+  <script>
+    function checkGuess() {
+      var guess = parseInt(document.getElementById("guessInput").value);
+      var randomNumber = Math.floor(Math.random() * 10) + 1;
+
+      if (guess === randomNumber) {
+        document.getElementById("result").textContent = "Congratulations! You guessed correctly!";
+      } else {
+        document.getElementById("result").textContent = "Wrong guess. Try again!";
+      }
+    }
+  </script>
 </body>
 </html>
